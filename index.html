@@ -58,10 +58,40 @@
         Implemented in Python, specifically the pygame library, this game is 
       </p>
       
-      <h4>Turtle Simulator</h4>
-      <h4>Turtle Simulator</h4>
-      <h4>Turtle Simulator</h4>
-      <h4>Turtle Simulator</h4>
+      <h4>Gomoku AI</h4>
+      <p>
+        This uses Monte Carlo Tree Search (MCTS) to play several games ahead and see what moves leadto a victory.
+        
+      </p>
+      <h4>Blackjack AI</h4>
+      <p>
+        This is a program does two things: evaluate a policy and try to create its own policy.
+        So a policy is simply a rule that an AI follows.
+        Here, our rule is "hit when under 17".
+        Using Monte Carlo Tree Policy Evaluation we can see that this policy actually does pretty well, it wins about 40% of the time.
+        We use a strategy called Q-learning to create our own strategy.
+        This strategy works quite a bit better, but only leads us to just above 50% win rate.
+        As a result, it's not very beneficial to play Blackjack, especially for a prolonged period of time, as it is unlikely you'll come out on top.
+      </p>
+      <h4>Sudoku Solver</h4>
+      <p>
+        Many small puzzle games we are NP-Complete, which basically means we don't have a really good algorithm to solve them.
+        However, this doesn't mean we can't; people can solve sudoku puzzles really quickly. 
+        Here, I've written a sudoku solver using constraint solving and backtracking.
+        There are x many permutations of a sudoku board, which are far too many solutions to search through to solve our problem.
+        The idea of constraint solving is that we can use given information to drastically reduce the number of possible solutions we should search through.
+        The idea of backtracking is that we recursively try or guesses, and we are able to know which decisions lead to wrong answers.
+        There is an improvement to this, which is using a SAT solver.
+        Sudoku is essentially a series of conditions that we need to satisfy to find an answer.
+        When we do a series of movies that lead to a wrong answer, we can create a new condition that is essentially another constraint and urther reduce the number of poential solutions to try.
+      </p>
+      <h4>Roommate Engagement Needs Tool (RENT)</h4>
+      <p>
+        This is an app I worked on with a group of 9 other UCSD students for our CSE 110 class.
+        RENT works to help roommate coordinate with one another.
+        The app contains several features, such as an expenses tracker, a calendar, and a bulletin board.
+        The expenses tracker allows roommates to coordinate payments to the 
+      </p>
       <p>
         I intend to show my very first project here at UCSD during a summer program, Summer Program for Incoming Students (SPIS); a Raspberry Pi based robot that is capable of drawing recursive shapes.
         I plan to talk about an app, R.E.N.T, I worked on in CSE 110, and discuss my experience of working in a team with new technologies.
