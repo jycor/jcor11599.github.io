@@ -40,7 +40,7 @@
 
     <section id="about">
       <h3>About Me</h3>
-      <img src="./face.jpg">
+      <img src="./resources/face.jpg">
       <p>
         My name is James Cor and I am a second year student majoring in Computer Science and minoring in Cognitive Science at the University of California, San Diego.
         Currently, I am working towards a Bachlors of Science in Computer Science, but I intend to pursue a Masters of Science in Computer Science, specifically for Artificial Intelligence.
@@ -55,14 +55,22 @@
       <h4>2048 Solver</h4>
       <p>
         This is an AI capable of solving a modified version of the popular 2048 game.
-        Implemented in Python, specifically the pygame library, this game is 
+        If you haven't played before, the goal of 2048 is to get the 2048 tile by combining two tiles of the same value and doubling their value.
+        At each move, the AI looks several moves ahead in the future, and picks the move that yields the highest score.
+        However, this doesn't get us to the 2048 tile.
+        To increase the score, I implemented a strategy many people use: putting the higher valued tiles in a corner and lining them up.
+        After implementing this heuristic, the AI is able to get the 2048 tile with ease and can sometimes even get the 4096 tile (two 2048 tiles).
       </p>
+
+      <img src="./resources/2048.PNG">
       
       <h4>Gomoku AI</h4>
       <p>
         This uses Monte Carlo Tree Search (MCTS) to play several games ahead and see what moves leadto a victory.
-        
       </p>
+        
+      <img src="./resources/gomoku1.PNG">
+      <img src="./resources/gomoku2.PNG">
       <h4>Blackjack AI</h4>
       <p>
         This is a program does two things: evaluate a policy and try to create its own policy.
@@ -73,6 +81,9 @@
         This strategy works quite a bit better, but only leads us to just above 50% win rate.
         As a result, it's not very beneficial to play Blackjack, especially for a prolonged period of time, as it is unlikely you'll come out on top.
       </p>
+      <img src="./resources/blackjack1.PNG">
+      <img src="./resources/blackjack2.PNG">
+      <img src="./resources/blackjack3.PNG">
       <h4>Sudoku Solver</h4>
       <p>
         Many small puzzle games we are NP-Complete, which basically means we don't have a really good algorithm to solve them.
