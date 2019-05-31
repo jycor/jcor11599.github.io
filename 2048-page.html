@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>DevFolio Bootstrap Template</title>
+  <title>James Cor</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -119,16 +119,14 @@
                 The advantage this AI has over humans is that it can actually simulate several moves ahead and see which move will lead to a higher score. 
                 Here the AI takes its current state and branches out, creating states for the resulting state if they did each of the 4 possible moves.
                 Then, from each of these states, the AI can branch out again and again, looking further into the future.
-                This 
                 However, it's clear to see that the tree the AI is building can grow exceptionally fast and take up far too many resources.
                 So it's best to restrict the AI from looking too many moves ahead to avoid waiting a long time for it to make a move.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.
-                Curabitur arcu erat,
-                accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor
-                volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium
-                ut lacinia in, elementum id enim.
+                However, despite this improvement, we still can't achieve the 2048 tile.
+                To do this, we're going to implement a common strategy people use: putting the higher valued tiles in a corner; this keeps the tiles neatly organized and will allow us to put them together easily.
+                We can implement this in our AI in the form of a heuristic.
+                We simply weight the squares in the upper left corner so that our AI will evaluate the score to be higher when the tiles are there, and will thus be encouraged to pick moves that keep those pieces there.
               </p>
               <blockquote class="blockquote">
                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -241,7 +239,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="copyright-box">
-              <p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
+              <p class="copyright">&copy; Copyright <strong>James Cor</strong>. All Rights Reserved</p>
               <div class="credits">
                 <!--
                   All the links in the footer should remain intact.
@@ -249,7 +247,7 @@
                   Licensing information: https://bootstrapmade.com/license/
                   Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
                 -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Designed by <a href="https://jcor11599.github.io/">James Cor</a>
               </div>
             </div>
           </div>
