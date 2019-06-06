@@ -72,7 +72,7 @@
     <div class="intro-content display-table">
       <div class="table-cell">
         <div class="container">
-          <h2 class="intro-title mb-4">2048 AI</h2>
+          <h2 class="intro-title mb-4">Blackjack AI</h2>
         </div>
       </div>
     </div>
@@ -86,10 +86,10 @@
         <div class="col-md-8">
           <div class="post-box">
             <div class="post-thumb">
-              <img src="img/2048.PNG" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="">
+              <img src="img/blackjack1.PNG" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="">
             </div>
             <div class="post-meta">
-              <h1 class="article-title">Alpha-Beta Pruning to Play 2048</h1>
+              <h1 class="article-title">Different Methods of Policy Evaluation for Blackjack</h1>
               <ul>
                 <li>
                   <span class="ion-ios-person"></span>
@@ -103,39 +103,29 @@
             </div>
             <div class="article-content">
               <p>
-                2048 is a popular puzzle game, in which the objective is to obtain the 2048 tile.
-                One can get higher tiles by combining two tiles of the same value.
-                The difficulty lies in simple mechanics of the game.
-                You can only swipe in 4 directions; each swipe causes all the tiles to move in that direction in the 4 by 4 grid and causes a 2 tile randomly appear in an empty square.
-                When you run out of moves, you lose.
+                Blackjack is popular card game played in Casinos.
+                There are many card counting techniques, but there are also simpler rules.
+                This projects evaluates the success of one of these policies: "hit under 17".
               </p>
               <p>
-                Initially, most people can get to a pretty high valued tile by looking 1 step ahead.
-                One can see that by swiping in one direction they can double the value of a tile.
-                However, it takes more than this to reach the 2048 tile.
+                We can use Monte Carlo Policy Evaluation to see how well this strategy does.
+                All we're doing with MC Policy Evaluation is keeping track of each card hand, and how often hitting / standing led to a victory.
+                However, there is a problem with using MC Policy Evaluation; it's slow and in other games it could get stuck in an infinite loop.
+                Luckily, there's another form of policy evaluation called Temporal Difference Policy Evaluation.
               </p>
               <p>
-                When the AI used here looks only 1 step ahead, it appears as though it is just moving tiles around randomly.
-                The advantage this AI has over humans is that it can actually simulate several moves ahead and see which move will lead to a higher score. 
-                Here the AI takes its current state and branches out, creating states for the resulting state if they did each of the 4 possible moves.
-                Then, from each of these states, the AI can branch out again and again, looking further into the future.
-                However, it's clear to see that the tree the AI is building can grow exceptionally fast and take up far too many resources.
-                So it's best to restrict the AI from looking too many moves ahead to avoid waiting a long time for it to make a move.
+                TD Policy Evaluation is very similar to MC Policy Evaluation, in which we still calculate the value of hitting and standing based on each hand.
+                TD policy Evaluation allows us to update these values on the fly, while we're still playing each simulation.
               </p>
+
+              <img src="img/blackjack2.PNG" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="">
+              <img src="img/blackjack3.PNG" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="">
+
               <p>
-                However, despite this improvement, we still can't achieve the 2048 tile.
-                To do this, we're going to implement a common strategy people use: putting the higher valued tiles in a corner; this keeps the tiles neatly organized and will allow us to put them together easily.
-                We can implement this in our AI in the form of a heuristic.
-                We simply weight the squares in the upper left corner so that our AI will evaluate the score to be higher when the tiles are there, and will thus be encouraged to pick moves that keep those pieces there.
-              </p>
-              <blockquote class="blockquote">
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              </blockquote>
-              <p>
-                Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Mauris blandit
-                aliquet elit, eget tincidunt
-                nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Donec sollicitudin molestie malesuada.
+                Lastly, in this project, I also implement an AI that attempts to create its own policy that is better than "hit under 17".
+                Here, I use Q-learning to map the values of each hand and determine whether or to hit or stand.
+                Even after several minutes of training, which equates to hundreds of simulations, the AI is only able to get barely above a 50% win rate.
+                So, this really shows that you shouldn't play Blackjack, as even a computer with a ton of experience can barely break even.
               </p>
             </div>
           </div>
@@ -149,7 +139,7 @@
                   <a href="gomoku-page.html">Gomoku AI</a>
                 </li>
                 <li>
-                  <a href="blackjack-page.html">Blackjack AI</a>
+                  <a href="2048-page.html">2048 AI</a>
                 </li>
                 <li>
                   <a href="sudoku-page.html">Sudoku Solver</a>
@@ -162,16 +152,19 @@
             <div class="sidebar-content">
               <ul>
                 <li>
-                  <a href="#">2048</a>
+                  <a href="#">Blackjack</a>
                 </li>
                 <li>
                   <a href="#">Artificial Intelligence</a>
                 </li>
                 <li>
-                  <a href="#">Alpha-Beta Pruning</a>
+                  <a href="#">Monte Carlo Policy Evaluation</a>
                 </li>
                 <li>
-                  <a href="#">Minimax Algorithm</a>
+                  <a href="#">Temporal Difference Policy Evaluation</a>
+                </li>
+                <li>
+                  <a href="#">Q-learning</a>
                 </li>
                 <li>
                   <a href="#">Python</a>
