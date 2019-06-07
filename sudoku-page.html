@@ -86,7 +86,7 @@
         <div class="col-md-8">
           <div class="post-box">
             <div class="post-thumb">
-              <img src="img/2048.PNG" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="">
+              <img src="img/sudoku1.PNG" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="">
             </div>
             <div class="post-meta">
               <h1 class="article-title">Constraint-Solving to Solve Sudoku Puzzles</h1>
@@ -103,30 +103,20 @@
             </div>
             <div class="article-content">
               <p>
-                2048 is a popular puzzle game, in which the objective is to obtain the 2048 tile.
-                One can get higher tiles by combining two tiles of the same value.
-                The difficulty lies in simple mechanics of the game.
-                You can only swipe in 4 directions; each swipe causes all the tiles to move in that direction in the 4 by 4 grid and causes a 2 tile randomly appear in an empty square.
-                When you run out of moves, you lose.
+                A popular Japanese puzzle game, Sudoku, is a simple, yet complex game.
+                The whole goal is to fill all the squares with the numbers 1-9 such that there are no repeated numbers in each row, column, or subsquare.
               </p>
               <p>
-                Initially, most people can get to a pretty high valued tile by looking 1 step ahead.
-                One can see that by swiping in one direction they can double the value of a tile.
-                However, it takes more than this to reach the 2048 tile.
+                Of course we can't just guess every permutation of a sudoku grid until we get a solution that's correct.
+                There are 81 squares in total (9 x 9) and 10 possibilities for each square (numbers 1-9).
+                In the worst possible case, we have 10^81 possible grids and that's quite a bit.
               </p>
               <p>
-                When the AI used here looks only 1 step ahead, it appears as though it is just moving tiles around randomly.
-                The advantage this AI has over humans is that it can actually simulate several moves ahead and see which move will lead to a higher score. 
-                Here the AI takes its current state and branches out, creating states for the resulting state if they did each of the 4 possible moves.
-                Then, from each of these states, the AI can branch out again and again, looking further into the future.
-                However, it's clear to see that the tree the AI is building can grow exceptionally fast and take up far too many resources.
-                So it's best to restrict the AI from looking too many moves ahead to avoid waiting a long time for it to make a move.
-              </p>
-              <p>
-                However, despite this improvement, we still can't achieve the 2048 tile.
-                To do this, we're going to implement a common strategy people use: putting the higher valued tiles in a corner; this keeps the tiles neatly organized and will allow us to put them together easily.
-                We can implement this in our AI in the form of a heuristic.
-                We simply weight the squares in the upper left corner so that our AI will evaluate the score to be higher when the tiles are there, and will thus be encouraged to pick moves that keep those pieces there.
+                Luckily, some squares are already filled with numbers, so we can use our constraints (no number can repeat in a row, column, and subsquare), to grealty reduce the number of possibiblities.
+                And that's exactly what our AI does, it eliminates solutions it knows is incorrect until a square only has only 1 possible solution.
+                From here, the AI can further constrain the problem.
+                However, at some point, there are no squares left with only 1 possible choice.
+                So, we're forced to guess; we just have to keep track of our guesses and pick the other choice when we find out that this guess can't lead to a correct solution.
               </p>
             </div>
           </div>
@@ -153,16 +143,13 @@
             <div class="sidebar-content">
               <ul>
                 <li>
-                  <a href="#">2048</a>
+                  <a href="#">Sudoku</a>
                 </li>
                 <li>
                   <a href="#">Artificial Intelligence</a>
                 </li>
                 <li>
-                  <a href="#">Alpha-Beta Pruning</a>
-                </li>
-                <li>
-                  <a href="#">Minimax Algorithm</a>
+                  <a href="#">Constraint Solving</a>
                 </li>
                 <li>
                   <a href="#">Python</a>
