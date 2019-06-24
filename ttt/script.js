@@ -41,7 +41,7 @@ function turn(squareID, player) {
 
 function checkWin(board, player) {
 	let plays = board.reduce((a, e, i) =>
-		(e === player) ? a.concat(i) : a, [])
+		(e === player) ? a.concat(i) : a, []);
 	let won = null;
 	for (let [index, win] of winCombos.entries()) {
 		if (win.every(elem => plays.indexOf(elem) > -1)) {
@@ -91,7 +91,7 @@ function checkTie() {
 function minimax(newBoard, player) {
 	var availSpots = emptySquares();
 	
-	if(checkWin(newBoard, player)) {
+	if(checkWin(newBoard, huPlayer)) {
 		return {score: -10};
 	}
 	else if (checkWin(newBoard, aiPlayer)) {
@@ -123,7 +123,7 @@ function minimax(newBoard, player) {
 	var bestMove;
 	if(player === aiPlayer) {
 		var bestScore = -10000;
-		for( var i = 0; i < moves.length; i++) {
+		for(var i = 0; i < moves.length; i++) {
 			if(moves[i].score > bestScore) {
 				bestScore = moves[i].score;
 				bestMove = i;
@@ -132,7 +132,7 @@ function minimax(newBoard, player) {
 	}
 	else {
 		var bestScore = 10000;
-		for(var i =0; i < moves.length; i++){
+		for(var i = 0; i < moves.length; i++){
 			if(moves[i].score < bestScore) {
 				bestScore = moves[i].score;
 				bestMove = i;
