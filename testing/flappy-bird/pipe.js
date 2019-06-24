@@ -1,6 +1,6 @@
 function Pipe() {
-  this.top = random(0.85 * height);
-  this.space = random(0.15 * height, 0.25 * height);
+  this.top = random(0.75 * height);
+  this.space = random(0.20 * height, 0.30 * height);
   this.x = width;
   this.w = 100;
   this.speed = 1;
@@ -23,8 +23,8 @@ function Pipe() {
   }
   
   this.hits = function(bird){
-    if(bird.y < this.top || bird.y > this.top + this.space){
-      if(bird.x > this.x && bird.x < this.x + this.w){
+    if(bird.y - (bird.size / 2) < this.top || bird.y + (bird.size / 2) > this.top + this.space){
+      if(bird.x + (bird.size / 2) > this.x && bird.x - (bird.size / 2) < this.x + this.w){
 		this.highlight = true;
         return true;
       }

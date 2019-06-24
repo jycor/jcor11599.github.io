@@ -1,6 +1,7 @@
 function Bird() {
   this.y = height / 2;
   this.x = 64;
+  this.size = 32;
   
   this.gravity = 0.75;
   this.lift = -20;
@@ -8,7 +9,7 @@ function Bird() {
   
   this.show = function() {
     fill(255, 255, 0);
-    ellipse(this.x, this.y, 32, 32);
+    ellipse(this.x, this.y, this.size, this.size);
   }
   
   this.up = function() {
@@ -16,9 +17,13 @@ function Bird() {
   }
   
   this.update = function() {
+	  
     this.velocity += this.gravity;
     this.velocity *= 0.95;
     this.y += this.velocity;
+	
+	//this.x = mouseX;
+	//this.y = mouseY;
     
     // Stop bird from exiting bounds
     if(this.y > height) {
