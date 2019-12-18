@@ -2,239 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>James Cor</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
 
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <title>Blackjack AI</title>
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: DevFolio
-    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 </head>
 
 <body>
-  <!--/ Nav Star /-->
-  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll" href="./index.html">James Cor</a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="index.html#about">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="index.html#work">Work Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="index.html#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="index.html#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!--/ Nav End /-->
 
-  <!--/ Intro Skew Star /-->
-  <div class="intro intro-single route bg-image" style="background-image: url(img/overlay-bg.jpg)">
-    <div class="overlay-mf"></div>
-    <div class="intro-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <h2 class="intro-title mb-4">Blackjack AI</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Intro Skew End /-->
+  <h1>Blackjack AI</h1>
+    <img src="img/blackjack1.PNG" alt="">
+    <h2 class="title">Different Methods of Policy Evaluation for Blackjack</h2>
+    <p>
+      Blackjack is popular card game played in Casinos.
+      There are many card counting techniques, but there are also simpler rules.
+      This projects evaluates the success of one of these policies: "hit under 17".
+    </p>
+    <p>
+      We can use Monte Carlo Policy Evaluation to see how well this strategy does.
+      All we're doing with MC Policy Evaluation is keeping track of each card hand, and how often hitting / standing led to a victory.
+      However, there is a problem with using MC Policy Evaluation; it's slow and in other games it could get stuck in an infinite loop.
+      Luckily, there's another form of policy evaluation called Temporal Difference Policy Evaluation.
+    </p>
+    <p>
+      TD Policy Evaluation is very similar to MC Policy Evaluation, in which we still calculate the value of hitting and standing based on each hand.
+      TD policy Evaluation allows us to update these values on the fly, while we're still playing each simulation.
+    </p>
 
-  <!--/ Section Blog-Single Star /-->
-  <section class="blog-wrapper sect-pt4" id="blog">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="post-box">
-            <div class="post-thumb">
-              <img src="img/blackjack1.PNG" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="">
-            </div>
-            <div class="post-meta">
-              <h1 class="article-title">Different Methods of Policy Evaluation for Blackjack</h1>
-              <ul>
-                <li>
-                  <span class="ion-ios-person"></span>
-                  <a href="#">James Cor</a>
-                </li>
-                <li>
-                  <span class="ion-pricetag"></span>
-                  <a href="#">Artificial Intelligence</a>
-                </li>
-              </ul>
-            </div>
-            <div class="article-content">
-              <p>
-                Blackjack is popular card game played in Casinos.
-                There are many card counting techniques, but there are also simpler rules.
-                This projects evaluates the success of one of these policies: "hit under 17".
-              </p>
-              <p>
-                We can use Monte Carlo Policy Evaluation to see how well this strategy does.
-                All we're doing with MC Policy Evaluation is keeping track of each card hand, and how often hitting / standing led to a victory.
-                However, there is a problem with using MC Policy Evaluation; it's slow and in other games it could get stuck in an infinite loop.
-                Luckily, there's another form of policy evaluation called Temporal Difference Policy Evaluation.
-              </p>
-              <p>
-                TD Policy Evaluation is very similar to MC Policy Evaluation, in which we still calculate the value of hitting and standing based on each hand.
-                TD policy Evaluation allows us to update these values on the fly, while we're still playing each simulation.
-              </p>
+    <img src="img/blackjack2.PNG" alt="">
+    <img src="img/blackjack3.PNG" alt="">
 
-              <div>
-              <img src="img/blackjack2.PNG" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="">
-              <img src="img/blackjack3.PNG" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="">
-              </div>
+    <p>
+      Lastly, in this project, I also implement an AI that attempts to create its own policy that is better than "hit under 17".
+      Here, I use Q-learning to map the values of each hand and determine whether or to hit or stand.
+      Even after several minutes of training, which equates to hundreds of simulations, the AI is only able to get barely above a 50% win rate.
+      So, this really shows that you shouldn't play Blackjack, as even a computer with a ton of experience can barely break even.
+    </p>
 
-              <p>
-                Lastly, in this project, I also implement an AI that attempts to create its own policy that is better than "hit under 17".
-                Here, I use Q-learning to map the values of each hand and determine whether or to hit or stand.
-                Even after several minutes of training, which equates to hundreds of simulations, the AI is only able to get barely above a 50% win rate.
-                So, this really shows that you shouldn't play Blackjack, as even a computer with a ton of experience can barely break even.
-              </p>
+    <p>
+      Here's a video of the Blackjack AI:
+    </p>
 
-              <p>
-                Here's a video of the Blackjack AI:
-              </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/AOCjO3uPjqk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/AOCjO3uPjqk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="widget-sidebar">
-            <h5 class="sidebar-title">Related Projects</h5>
-            <div class="sidebar-content">
-              <ul class="list-sidebar">
-                <li>
-                  <a href="gomoku-page.html">Gomoku AI</a>
-                </li>
-                <li>
-                  <a href="2048-page.html">2048 AI</a>
-                </li>
-                <li>
-                  <a href="sudoku-page.html">Sudoku Solver</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="widget-sidebar widget-tags">
-            <h5 class="sidebar-title">Tags</h5>
-            <div class="sidebar-content">
-              <ul>
-                <li>
-                  <a href="#">Blackjack</a>
-                </li>
-                <li>
-                  <a href="#">Artificial Intelligence</a>
-                </li>
-                <li>
-                  <a href="#">Monte Carlo Policy Evaluation</a>
-                </li>
-                <li>
-                  <a href="#">Temporal Difference Policy Evaluation</a>
-                </li>
-                <li>
-                  <a href="#">Q-learning</a>
-                </li>
-                <li>
-                  <a href="#">Python</a>
-                </li>
-                <li>
-                  <a href="#">pygame</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ Section Blog-Single End /-->
-
-  <!--/ Section Contact-Footer Star /-->
-  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
-    <div class="overlay-mf"></div>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="copyright-box">
-              <p class="copyright">&copy; Copyright <strong>James Cor</strong>. All Rights Reserved</p>
-              <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-                -->
-                Designed by <a href="https://jcor11599.github.io/">James Cor</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </section>
-  <!--/ Section Contact-footer End /-->
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <div id="preloader"></div>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/popper/popper.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/counterup/jquery.waypoints.min.js"></script>
-  <script src="lib/counterup/jquery.counterup.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script src="lib/typed/typed.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <h3>Related Projects</h3>
+    <ul>
+      <li>
+        <a href="gomoku-page.html">Gomoku AI</a>
+      </li>
+      <li>
+        <a href="2048-page.html">2048 AI</a>
+      </li>
+      <li>
+        <a href="sudoku-page.html">Sudoku Solver</a>
+      </li>
+    </ul>
 
 </body>
 </html>
