@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Sudoku Solver</title>
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <h1>Sudoku Solver</h1>
+    <h2 class="title">Constraint-Solving to Solve Sudoku Puzzles</h2>
+    <p>
+      A popular Japanese puzzle game, Sudoku, is a simple, yet complex game.
+      The whole goal is to fill all the squares with the numbers 1-9 such that there are no repeated numbers in each row, column, or subsquare.
+    </p>
+    <p>
+      Of course we can't just guess every permutation of a sudoku grid until we get a solution that's correct.
+      There are 81 squares in total (9 x 9) and 9 possibilities for each square (numbers 1-9).
+      In the worst possible case, we have 9^81 possible grids and that's quite a bit.
+    </p>
+    <p>
+      Luckily, some squares are already filled with numbers, so we can use our constraints (no number can repeat in a row, column, and subsquare), to grealty reduce the number of possibiblities.
+      And that's exactly what our AI does, it eliminates solutions it knows is incorrect until a square only has only 1 possible solution.
+      From here, the AI can further constrain the problem.
+      However, at some point, there are no squares left with only 1 possible choice.
+      So, we're forced to guess; we just have to keep track of our guesses and pick the other choice when we find out that this guess can't lead to a correct solution.
+    </p>
+  <h3 class="sidebar-title">Related Projects</h3>
+    <li>
+      <a href="gomoku-page.html">Gomoku AI</a>
+    </li>
+    <li>
+      <a href="blackjack-page.html">Blackjack AI</a>
+    </li>
+    <li>
+      <a href="2048-page.html">2048 AI</a>
+    </li>
+  </ul>
+
+</body>
+</html>

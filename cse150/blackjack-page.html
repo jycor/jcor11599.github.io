@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Blackjack AI</title>
+
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <h1>Blackjack AI</h1>
+    <img src="img/blackjack1.PNG" alt="">
+    <h2 class="title">Different Methods of Policy Evaluation for Blackjack</h2>
+    <p>
+      Blackjack is popular card game played in Casinos.
+      There are many card counting techniques, but there are also simpler rules.
+      This projects evaluates the success of one of these policies: "hit under 17".
+    </p>
+    <p>
+      We can use Monte Carlo Policy Evaluation to see how well this strategy does.
+      All we're doing with MC Policy Evaluation is keeping track of each card hand, and how often hitting / standing led to a victory.
+      However, there is a problem with using MC Policy Evaluation; it's slow and in other games it could get stuck in an infinite loop.
+      Luckily, there's another form of policy evaluation called Temporal Difference Policy Evaluation.
+    </p>
+    <p>
+      TD Policy Evaluation is very similar to MC Policy Evaluation, in which we still calculate the value of hitting and standing based on each hand.
+      TD policy Evaluation allows us to update these values on the fly, while we're still playing each simulation.
+    </p>
+
+    <img src="img/blackjack2.PNG" alt="">
+    <img src="img/blackjack3.PNG" alt="">
+
+    <p>
+      Lastly, in this project, I also implement an AI that attempts to create its own policy that is better than "hit under 17".
+      Here, I use Q-learning to map the values of each hand and determine whether or to hit or stand.
+      Even after several minutes of training, which equates to hundreds of simulations, the AI is only able to get barely above a 50% win rate.
+      So, this really shows that you shouldn't play Blackjack, as even a computer with a ton of experience can barely break even.
+    </p>
+
+    <p>
+      Here's a video of the Blackjack AI:
+    </p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/AOCjO3uPjqk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <h3>Related Projects</h3>
+    <ul>
+      <li>
+        <a href="gomoku-page.html">Gomoku AI</a>
+      </li>
+      <li>
+        <a href="2048-page.html">2048 AI</a>
+      </li>
+      <li>
+        <a href="sudoku-page.html">Sudoku Solver</a>
+      </li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Gomoku</title>
+
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <h1>Gomoku AI</h1>
+    <img src="img/gomoku1.PNG" alt="">
+    <h2 class="title">Monte Carlo Tree Search to play Gomoku</h2>
+    <p>
+      Gomoku is a Japanese puzzle game similar to Go.
+      The objective of Gomoku is to put five of your pieces in a line (horizontally, veritcally, or diagonally) before your opponent can.
+    </p>
+    <p>
+      To play this game, I use Monte Carlo Tree Search to find the best move.
+      The basic idea is to look at all the possible places to put down a piece and simulate a game from there on several times and the win ratio for each move.
+    </p>
+    <p>
+      Since there are so many possible moves, the time it takes to run all these simulations can get very expensive, so we limit the number of simulations.
+      Despite this, our AI still works very well.
+    </p>
+    <p>
+      Here is a video of Gomoku (the AI is the white player, black is a random player):
+    </p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K3mvMJ_fUis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <p>
+      Here is another photo:
+    </p>
+    <img src="img/gomoku2.PNG" alt="">
+    <h3 class="sidebar-title">Related Projects</h3>
+      <ul class="list-sidebar">
+        <li>
+          <a href="2048-page.html">2048 AI</a>
+        </li>
+        <li>
+          <a href="blackjack-page.html">Blackjack AI</a>
+        </li>
+        <li>
+          <a href="sudoku-page.html">Sudoku Solver</a>
+        </li>
+      </ul>
+</body>
+</html>
